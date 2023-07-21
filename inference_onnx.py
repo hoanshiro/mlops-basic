@@ -22,7 +22,7 @@ class ColaONNXPredictor:
         scores = softmax(ort_output[0])[0]
         prediction = []
         for score, label in zip(scores, self.labels):
-            prediction.append({"label": label, "score": score})
+            prediction.append({"label": label, "score": float(score)})
         return prediction
     
 if __name__ == "__main__":
