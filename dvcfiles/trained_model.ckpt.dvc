@@ -1,0 +1,5 @@
+outs:
+- md5: 79bbb5f0954193f0bc2fbf0040a75de4
+  size: 52688947
+  hash: md5
+  path: trained_model.ckpt
