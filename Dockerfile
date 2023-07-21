@@ -15,12 +15,12 @@ RUN dvc remote add -d storage gdrive://1O-6JApTdpJKF3tIYtfl8uV4Huh1QwuG-
 RUN dvc remote modify storage gdrive_use_service_account true
 RUN dvc remote modify storage gdrive_service_account_json_file_path creds.json
 
-# pulling the trained model
-RUN dvc pull dvcfiles/trained_model.dvc
+# # pulling the trained model
+RUN dvc pull dvcfiles/trained_model.ckpt.dvc
 
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
 
-# running the application
+# # running the application
 EXPOSE 8000
 CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
