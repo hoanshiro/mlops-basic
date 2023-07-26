@@ -1,3 +1,5 @@
 __pycache__
 outputs/
 .dvc/
+creds.json
+Dockerfile_v1
